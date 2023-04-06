@@ -1,3 +1,13 @@
+- name: Debian-Based | Uninstall old versions
+  apt:
+  name:
+    - docker
+    - docker-engine
+    - docker.io
+    - containerd
+    - runc
+  state: absent
+
 - name: Debian-Based | Update apt package index and install necessary packages
   apt:
     name:
